@@ -25,6 +25,7 @@ hamburger_menu.onclick = () => {
     const bottom_burger = document.querySelector(".bottom-burger");
     if (navbar_modal.style.display == "block") {
         navbar_modal.style.display = "none";
+        hamburger_menu.style.transition = "transform 0s"; 
         hamburger_menu.style.transform = "translateX(0px)";
         hamburger_menu.style.paddingLeft = "5px";
         top_burger.style.transformOrigin = "left";
@@ -36,7 +37,8 @@ hamburger_menu.onclick = () => {
     }
     navbar_modal.style.display = "block"; 
     navbar.style.left =  "0";
-    hamburger_menu.style.transform = "translateX(100px)";
+    hamburger_menu.style.transition = "transform 0.5s"; 
+    hamburger_menu.style.transform = "translateX(200px)";
     hamburger_menu.style.paddingLeft = "10px";
     top_burger.style.transformOrigin = "left";
     top_burger.style.transform= "rotate(30deg)";

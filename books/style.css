@@ -53,7 +53,7 @@ body {
 }
 
 .navbar-modal > .navbar {
-    width: 200px;
+    width: 300px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -109,6 +109,11 @@ body {
 
 .book-modal > .text > .exit-button:hover {
     cursor: pointer;
+}
+
+.book-modal > .book {
+    display: flex;
+    align-items: center;
 }
 
 .book-modal > .book > figure > img {
