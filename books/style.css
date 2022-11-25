@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("MontserratRegular-RpK6l.otf");
+}
+
+body {
+    font-family: "Montserrat";
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: grid;
+    padding: 5px;
+    border-radius: 5px;
+    grid-template-columns:  1 fr;
+    row-gap: 5px;
+    transition: transform 0.5s;
+}
+
+.hamburger-menu:hover {
+    cursor: pointer;
+    background-color: rgba(217, 217, 217, 0.957);
+}
+
+.hamburger {
+    width: 50px;
+    height: 8px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.hamburger-menu:hover > .bottom-burger {
+    transition: 0.5s;
+}
+
+.hamburger-menu:hover > .middle-burger {
+    transition: 0.5s;
+}
+.hamburger-menu:hover > .top-burger {
+    transition: 0.5s;
+}
+
+.navbar-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(71, 71, 71, 0.779);
+    display: none;
+}
+
+.navbar-modal > .navbar {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    background-color: white;
+    padding-top: 100px;
+}
+
+.navbar-modal > .navbar > .nav-icon {
+    width: calc(100% - 20px);
+    height: 100px;
+    padding: 10px;
+} 
+
+.navbar-modal > .navbar > .nav-icon:hover {
+   background-color: gray; 
+   cursor: pointer;
+}
+
+.book-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(71, 71, 71, 0.779);
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+} 
+
+.book-modal {
+    display: grid;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.book-modal > div {
+    border: 1px solid black;
+}
+
+.book-modal > .text {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.book-modal > .text > .exit-button {
+    padding: 20px;
+    text-align: right;
+}
+
+.book-modal > .text > .exit-button:hover {
+    cursor: pointer;
+}
+
+.book-modal > .book > figure > img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+.book-modal > .book > figure > figcaption {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    margin: auto;
+    width: 80%;
+    margin-top: 50px;
+    gap: 80px 50px;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.book-container {
+    /*border: 1px solid black; */
+    height: 300px;
+}
+
+.book-container:hover {
+    background-color: rgba(217, 217, 217, 0.957);
+    transition: background-color 0.75s;
+    cursor: pointer;
+}
+
+.book-container > figure > img {
+    display: block;
+    width: 150px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 5px 5px grey;
+
+}
+
+.book-container > figure > figcaption {
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .book-modal {
+        display: grid;
+        background-color: white;
+        width: 280px;
+        height: 80%;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .book-modal > .text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .book-modal > .book > figure > img {
+        display: block;
+        width: 120px;
+        height: 160px;
+        margin: auto;
+    }
+}
