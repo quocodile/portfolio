@@ -91,6 +91,7 @@ body {
     width: 80%;
     height: 80%;
     grid-template-columns: repeat(3, 1fr)
+    padding: 0;
 }
 
 .book-modal > div {
@@ -102,8 +103,18 @@ body {
     grid-column-end: 4;
 }
 
+.book-modal > .text > div > h2 {
+    padding: 0 30px;
+}
+
+.book-modal > .text > div > p {
+    padding: 0 30px;
+}
+
 .book-modal > .text > .exit-button {
-    padding: 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
     text-align: right;
 }
 
@@ -176,15 +187,17 @@ body {
         grid-template-columns: repeat(1, 1fr);
     }
     .book-modal {
-        display: grid;
-        background-color: white;
-        width: 280px;
+        width: 80%;
         height: 80%;
         grid-template-rows: repeat(2, 1fr);
     }
     .book-modal > .text {
-        grid-column-start: 1;
-        grid-column-end: 2;
+        width: 100%;
+        grid-column: 1 / 2;
+    }
+
+    .book-modal > .book {
+        width: 100%;
     }
 
     .book-modal > .book > figure > img {

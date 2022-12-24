@@ -1,16 +1,36 @@
 const modal_exit_button = document.querySelector(".book-modal > .text > .exit-button");
 const book_modal_container = document.querySelector(".book-modal-container");
 const book_modal_image = book_modal_container.querySelector("img");
+const book_modal_title = book_modal_container.querySelector("figcaption");
 const hamburger_menu = document.querySelector(".hamburger-menu");
 const navbar_modal = document.getElementById("navbar-modal");
 const navbar = document.getElementById("navbar");
 const books = document.querySelectorAll(".grid-container > .book-container");
 
+
+const book_thoughts_map = {
+    "The Emperor of All Maladies": 
+        "It had a good mix of history, biology, and medicine as it told the story of cancer. It got a bit dull once it talked about the politics of cancer, but the pain was worth it as I think I learned a lot. It was nice that the book tied in a story of cancer itself as well as how cancer relates to the life of the author-Siddhartha Mukherjee. It felt more personal hearing the stories that he had relating to the cancer patients he met."
+}
+
+const book_takeways_map = {
+    "The Emperor of All Maladies": 
+        "The history of AIDs and Cancer is connected. AIDs used to be called gay cancer."
+}
+
 books.forEach( book => {
     book.onclick = () => {
-        book_modal_container.style.display = "flex"; 
         const book_image = book.querySelector("figure > img");
+        const book_title = book.querySelector("figure > figcaption");
+        const thoughts_container = document.querySelector(".book-modal > .text > .thoughts"); 
+        const takeaways_container = document.querySelector(".book-modal > .text > .main-takeaways"); 
+        const thoughts_text = thoughts_container.querySelector("p");
+        const takeaways_text = takeaways_container.querySelector("p");
+        book_modal_container.style.display = "flex"; 
         book_modal_image.src = book_image.src;
+        book_modal_title.innerHTML = book_title.innerHTML;
+        thoughts_text.innerHTML = book_thoughts_map[book_title.innerHTML];
+        takeaways_text.innerHTML = book_takeways_map[book_title.innerHTML]; 
     }
 });
 
