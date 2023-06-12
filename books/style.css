@@ -194,6 +194,7 @@ body {
     .book-modal > .text {
         width: 100%;
         grid-column: 1 / 2;
+        overflow: scroll;
     }
 
     .book-modal > .book {
