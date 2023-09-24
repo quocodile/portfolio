@@ -10,12 +10,16 @@ const books = document.querySelectorAll(".grid-container > .book-container");
 
 const book_thoughts_map = {
     "The Emperor of All Maladies": 
-        "It had a good mix of history, biology, and medicine as it told the story of cancer. It got a bit dull once it talked about the politics of cancer, but the pain was worth it as I think I learned a lot. It was nice that the book tied in a story of cancer itself as well as how cancer relates to the life of the author-Siddhartha Mukherjee. It felt more personal hearing the stories that he had relating to the cancer patients he met."
+        "It had a good mix of history, biology, and medicine as it told the story of cancer. It got a bit dull once it talked about the politics of cancer, but the pain was worth it as I think I learned a lot. It was nice that the book tied in a story of cancer itself as well as how cancer relates to the life of the author-Siddhartha Mukherjee. It felt more personal hearing the stories that he had relating to the cancer patients he met.",
+    "Under My Hijab":
+      "It was a cute book that I read with Anwesha during winter break 2022."
 }
 
 const book_takeways_map = {
     "The Emperor of All Maladies": 
-        "The history of AIDs and Cancer is connected. AIDs used to be called gay cancer."
+        "The history of AIDs and Cancer is connected. AIDs used to be called gay cancer.",
+    "Under My Hijab":
+      "There are many different styles of hijabs. Wearing a hijab/not wearing a hijab may depend on interpretations of Islam."
 }
 
 books.forEach( book => {
